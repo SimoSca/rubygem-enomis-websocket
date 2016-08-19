@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require "bundler/setup"
+require 'commander/import'
+
+program :name, 'Enomis WebSocket'
+program :version, '0.0.1'
+program :description, 'simple gem to manager WebSocket Client/Server'
+
+command :serve do |c|
+  c.syntax = 'Enomis WebSocket serve [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    # Do something or c.when_called Enomis websocket::Commands::Serve
+    puts "Hi"
+    puts "#{args}"
+    puts "#{options}"
+        Enomis::Websocket::Command::Serve
+  end
+end
