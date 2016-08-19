@@ -3,6 +3,7 @@
 require 'rubygems'
 require "bundler/setup"
 require 'commander/import'
+require 'enomis/websocket'
 
 program :name, 'Enomis WebSocket'
 program :version, '0.0.1'
@@ -16,9 +17,6 @@ command :serve do |c|
   c.option '--some-switch', 'Some switch that does something'
   c.action do |args, options|
     # Do something or c.when_called Enomis websocket::Commands::Serve
-    puts "Hi"
-    puts "#{args}"
-    puts "#{options}"
-        Enomis::Websocket::Command::Serve
+    Enomis::Websocket::Command::Serve.new(args, options)
   end
 end

@@ -2,7 +2,9 @@ module Enomis
     module Websocket
         module Command
             class Serve
-                puts "from serve!"
+                def initialize(args, options)
+                    Enomis::Websocket::Server.start
+                end
             end
         end
     end

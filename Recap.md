@@ -114,3 +114,24 @@ to add command line I've used [Commander](https://github.com/commander-rb/comman
 
 
 To better manage my command, I've create a separate commander `directory` into `lib`, and clearly added `required` each file into `lib/enomis/websocket.rb`
+
+
+
+### Build
+
+Create a local gem build
+
+`gem build enomis-websocket.gemspec`
+
+
+### Publish on github
+
+optional...
+
+
+Testing
+--------
+
+* it's better test each time with `rspec`
+
+* local CLI test with `bundle exec ruby exe/enomis-websocket`

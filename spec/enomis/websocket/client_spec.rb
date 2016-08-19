@@ -1,6 +1,4 @@
 require 'spec_helper'
-require 'websocket-eventmachine-client'
-
 
 describe Enomis::Websocket::Client do
 

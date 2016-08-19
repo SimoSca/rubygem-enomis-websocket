@@ -3,6 +3,8 @@
 # => https://github.com/imanel/websocket-eventmachine-client
 #####
 
+require 'websocket-eventmachine-client'
+
 module Enomis
     module Websocket
         # nested Clients are useful to use the class in two manner:
