@@ -46,6 +46,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "json"
   # to manage command line
   spec.add_dependency "commander"
-  spec.executables   <<  "bin/enomis-websocket"
 
 end
