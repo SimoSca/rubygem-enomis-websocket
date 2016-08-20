@@ -5,6 +5,7 @@ require "enomis/websocket/server"
 
 # command line files
 require "enomis/websocket/command/serve"
+require "enomis/websocket/command/javascript"
 
 module Enomis
     module Websocket

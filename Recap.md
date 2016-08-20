@@ -123,10 +123,27 @@ Create a local gem build
 
 `gem build enomis-websocket.gemspec`
 
+and after i can see a `*.gem` file, that is my builded gem!
 
-### Publish on github
+The problem now is that this file is in this path, and neither ruby nor bundle knows this path... but thanks to this [article](https://rossta.net/blog/how-to-specify-local-ruby-gems-in-your-gemfile.html) the soluzion is simply:
 
-optional...
+`bundle config local.enomis-websocket /path/to/local/git/repository`
+
+
+and in other ruby project, require it via
+
+`gem "enomis-websocket", github: "black/enomis-websocket", branch: "master"`
+
+where "black" is my current machin user
+
+> `bundle config` shows the bundle configuration
+
+> `bundle config --delete local.YOUR_GEM_NAME` to remove the local bundle configuration
+
+
+### Publish on ruby!
+
+optional... but need an account t
 
 
 Testing

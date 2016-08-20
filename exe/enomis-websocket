@@ -20,3 +20,16 @@ command :serve do |c|
     Enomis::Websocket::Command::Serve.new(args, options)
   end
 end
+
+
+command :javascript do |c|
+  c.syntax = 'Enomis WebSocket serve [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    # Do something or c.when_called Enomis websocket::Commands::Serve
+    Enomis::Websocket::Command::Javascript.new(args, options)
+  end
+end
